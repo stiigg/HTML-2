@@ -1,0 +1,152 @@
+<html>
+  <head>
+  <!DOCTYPE html>
+<html>
+
+<head>
+<style>
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+    margin-right: 150px;
+    margin-left: 150px;
+    border: 1px solid #ccc;
+    width: 400px;
+	border-radius: 25px;
+	-webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 10s;
+	
+}
+
+#nav {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+    margin-right: 150px;
+    margin-left: 150px;
+    border: 1px solid #ccc;
+    width: 400px;
+	border-radius: 25px;
+	-webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 10s;
+}
+
+
+</style>
+<title>Accueil</title>
+<meta charset="UTF-8">
+
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Draw the pie chart for Sarah's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawSarahChart);
+
+      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawAnthonyChart);
+
+      // Callback that draws the pie chart for Sarah's pizza.
+      function drawSarahChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'suis act');
+        data.addColumn('number', 'freq');
+        data.addRows([
+          ['oui', 30],
+          ['non', 70]
+        ]);
+
+        // Set options for Sarah's pie chart.
+        var options = {title:'suivez vous les actualités sportives',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Sarah's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Sarah_chart_div'));
+        chart.draw(data, options);
+      }
+
+      // Callback that draws the pie chart for Anthony's pizza.
+      function drawAnthonyChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'pratique');
+        data.addColumn('number', 'freq');
+        data.addRows([
+          ['oui', 40],
+          ['non', 60]
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {title:'Pratiquez vous le sport',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Sarah's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+  <img src="logo.jpg" style="width:567px;height:170px;">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Mon site</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Index</a></li>
+      <li><a href="createur.html">Créateur</a></li>
+      <li><a href="problematique.html">Problématique</a></li>
+    </ul>
+  </div>
+</nav>
+  <p>
+   L’objectif de notre étude était d'étudier la pratique du sport par les lycéens. Nous sommes donc allé dans des lycées pour collecter les données utiles à notre enquête. Ceci a été fait à l'aide de questionnaires qui ont été rédigé au préalable. Nous avons ensuite traité les donnés. Dans cette partie nous allons vous décrire brièvement les résultats de l'étude.
+  </p>
+    <table class="columns">
+      <tr>
+        <td><div id="Sarah_chart_div" style="border: 1px solid #ccc"></div></td>
+        <td><div id="Anthony_chart_div" style="border: 1px solid #ccc"></div></td>
+      </tr>
+    </table>
+	<p>
+	Ainsi nous avons essayé de voir si le suivi de l'actualité sportive influe sur la pratique du sport.
+	</p>
+	<canvas id="myCanvas">
+	
+	</canvas>
+  </body>
+</html>
